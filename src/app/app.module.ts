@@ -6,7 +6,7 @@ import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import {AngularFireModule, AuthProviders, AuthMethods} from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods} from 'angularfire2';
 
 import { AppRouteModule } from './app-route/app-route.module';
 import { AuthService } from './shared/security/auth.service';
