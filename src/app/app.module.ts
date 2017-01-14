@@ -4,16 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+
+import { AppRouteModule } from './app-route/app-route.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng2BootstrapModule
+    Ng2BootstrapModule,
+    AppRouteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
