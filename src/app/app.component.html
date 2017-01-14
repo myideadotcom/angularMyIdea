@@ -12,8 +12,8 @@
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user" ></span> Rejestracja</a></li>
-          <li><a href="#" routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in" ></span> Zaloguj się</a></li>
+          <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/register" routerLinkActive="active" ><span class="glyphicon glyphicon-user" ></span> Rejestracja</a></li>
+          <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in" ></span> Zaloguj się</a></li>
         </ul>
       </div>
     </nav>

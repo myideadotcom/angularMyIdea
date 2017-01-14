@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AppComponent } from './app.component';
@@ -8,8 +8,11 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AngularFireModule, AuthProviders, AuthMethods} from 'angularfire2';
 
+
+
 import { AppRouteModule } from './app-route/app-route.module';
 import { AuthService } from './shared/security/auth.service';
+import { RegisterComponent } from './register/register.component';
 
 var config = {
   apiKey: "AIzaSyBqMBdbnw8z3SEm6UYFVmC_xpZkHUXqtqU",
@@ -29,12 +32,14 @@ export const authConfig = {
     AppComponent,
     LoginComponent,
     HomeComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     Ng2BootstrapModule,
+    ReactiveFormsModule,
     AppRouteModule,
     AngularFireModule.initializeApp(config, authConfig)
   ],
