@@ -1,3 +1,16 @@
+Nazwa zespołu : Random Input
+Rodzaj: Aplikacja internetowa.
+Cel i przeznaczanie:  Strona internetowa, która umożliwia logowanie, rejestracje i tworzenie postów, które każdy z innych zarejestrowanych użytkowników może oceniać
+Platforma: Angular 2
+Przyszły rozwój: Ciągła poprawa optymalizacji kodu i udogodnienia dla użytkowników.
+Timeline: Co tydzień kontrola postępów i dalsza organizacja pracy w zespole.
+Podział zadań:
+Sebastian Gozdur : Webdeveloper
+Bartłomiej Gryglicki: Webdesigner
+Arek Przybyś: Administrator bazy danych
+Daniel Mikołajczuk: Webmaster
+
+---------------------------------------------------------------------------------------------------------
 ## myidea
 
 ## Requirements
