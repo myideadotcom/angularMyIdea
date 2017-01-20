@@ -19,4 +19,8 @@ export class AppComponent implements OnInit {
     this.authService.authInfo$.subscribe(authInfo => this.authInfo = authInfo);
   }
 
+  logout(){
+    this.authService.logout();
+  }
+
 }

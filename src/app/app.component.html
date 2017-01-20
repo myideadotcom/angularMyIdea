@@ -1,22 +1,20 @@
 <div class="row show-grid">
   <div class="col-md-12">
     <div class="logoContainer"><div class="innerLogoContainer"></div></div>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#" routerLink="/home" routerLinkActive="active">Główna</a></li>
-          <li><a href="#">Szukaj</a></li>
-          <li><a href="#">Przeglądaj</a></li>
-          <li><a href="#">Wsparcie</a></li>
-          <li><a href="#">Kontakt</a></li>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#" routerLink="/home" routerLinkActive="active">Główna</a></li>
+        <li *ngIf="authInfo?.isLoggedIn()"><a href="#" routerLink="/ideas" routerLinkActive="active">Lista pomysłów</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/register" routerLinkActive="active" ><span class="glyphicon glyphicon-user" ></span> Rejestracja</a></li>
+        <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in" ></span> Zaloguj się</a></li>
+        <li *ngIf="authInfo?.isLoggedIn()"><a href="#" (click)="logout()" routerLink="/home" routerLinkActive="active"><span class="glyphicon glyphicon-log-in" ></span> Wyloguj się</a></li>
 
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/register" routerLinkActive="active" ><span class="glyphicon glyphicon-user" ></span> Rejestracja</a></li>
-          <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in" ></span> Zaloguj się</a></li>
-        </ul>
-      </div>
-    </nav>
+      </ul>
+    </div>
+  </nav>
     <router-outlet> </router-outlet>
   </div>
 </div>

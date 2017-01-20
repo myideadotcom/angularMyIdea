@@ -13,6 +13,8 @@ import { AngularFireModule, AuthProviders, AuthMethods} from 'angularfire2';
 import { AppRouteModule } from './app-route/app-route.module';
 import { AuthService } from './shared/security/auth.service';
 import { RegisterComponent } from './register/register.component';
+import { IdeasListComponent } from './ideas-list/ideas-list.component';
+import { SingleIdeaComponent } from './single-idea/single-idea.component';
 
 var config = {
   apiKey: "AIzaSyBqMBdbnw8z3SEm6UYFVmC_xpZkHUXqtqU",
@@ -33,6 +35,8 @@ export const authConfig = {
     LoginComponent,
     HomeComponent,
     RegisterComponent,
+    IdeasListComponent,
+    SingleIdeaComponent,
   ],
   imports: [
     BrowserModule,
