@@ -9,6 +9,7 @@
 **Przyszły rozwój:** Ciągła poprawa optymalizacji kodu i udogodnienia dla użytkowników.
 
 **Timeline:** Co tydzień kontrola postępów i dalsza organizacja pracy w zespole.
+https://drive.google.com/open?id=1UU_G_xj15kNJ3LseRQ_IMp1rgmrLu-teog6ihU8BCtc
 
 **Podział zadań:**
 
@@ -19,6 +20,8 @@ Bartłomiej Gryglicki: Webdesigner
 Arek Przybyś: Administrator bazy daych
 
 Daniel Mikołajczuk: Webmaster
+
+
 
 ---------------------------------------------------------------------------------------------------------
 ## myidea
