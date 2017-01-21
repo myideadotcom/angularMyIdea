@@ -5,7 +5,8 @@
     <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#" routerLink="/home" routerLinkActive="active">Główna</a></li>
-        <li *ngIf="authInfo?.isLoggedIn()"><a href="#" routerLink="/ideas" routerLinkActive="active">Lista pomysłów</a></li>
+        <li><a href="#" routerLink="/ideas" routerLinkActive="active">Lista pomysłów</a></li>
+        <li><a href="#" routerLink="/add-idea" routerLinkActive="active">Dodaj pomysł</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/register" routerLinkActive="active" ><span class="glyphicon glyphicon-user" ></span> Rejestracja</a></li>

@@ -1,0 +1,12 @@
+<h1>Dodaj pomysł </h1>
+<form [formGroup]="form">
+  <div>
+    <label>Tytuł pomysłu:</label>
+    <input type="text" placeholder="Email" formControlName="title">
+  </div>
+  <div>
+    <label>Opis pomysłu</label>
+    <input type="text" formControlName="description">
+  </div>
+  <button (click)="addIdea()">Dodaj</button>
+</form>
