@@ -14,14 +14,14 @@
 -->
 <div id="logowanie">
   <h1>Logowanie:</h1> <br/>
-  <form class="form-inline">
+  <form class="form-inline" [formGroup]="form">
     <div class="form-group">
       <label for="email">Adres Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Podaj adres">
+      <input type="email" class="form-control" id="email" placeholder="Podaj adres" formControlName="email">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Podaj haslo">
+      <input type="password" class="form-control" id="pwd" placeholder="Podaj haslo" formControlName="password">
     </div>
     <br/><br/>
     <button type="button" class="btn btn-success" (click)="login()">Zaloguj</button>
