@@ -7,11 +7,24 @@
   float:none;
   /* reset the text-align */
   text-align:center;
+  color: white;
 
   /* inline-block space fix */
-  margin-right:-4px;
-  background-color: #D3D3D3;
-  margin:4px;
+  margin-right:-2px;
+  background-color: #0080FF;
+  margin:2px;
+}
+
+.leftitem {
+  float: left;
+  width: 50%;
+  border: 1px;
+}
+
+.rightitem {
+  float: right;
+  width: 50%;
+  border: 1px;
 }
 
 .item {
