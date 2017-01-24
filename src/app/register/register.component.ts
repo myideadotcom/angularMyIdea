@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
 import {AuthService} from "../shared/security/auth.service";
 import {Router} from "@angular/router";
+import {AngularFire, FirebaseListObservable} from "angularfire2";
 
 @Component({
   selector: 'app-register',
@@ -11,8 +12,12 @@ import {Router} from "@angular/router";
 export class RegisterComponent {
 
   form:FormGroup;
+  profiles: FirebaseListObservable<any>;
+  uid: string;
 
-  constructor(private fb: FormBuilder, private authService:AuthService, private router:Router) {
+
+
+  constructor(private fb: FormBuilder, private authService:AuthService, private router:Router, private af: AngularFire) {
     this.form = this.fb.group({
       email:['',Validators.required],
       password: ['', Validators.required],
@@ -20,6 +25,7 @@ export class RegisterComponent {
       secondName:['',Validators.required],
       indexNumber:['',Validators.required]
     });
+    this.profiles = this.af.database.list('profiles');
   }
 
   signUp() {
@@ -28,7 +34,13 @@ export class RegisterComponent {
     subscribe(
       () => {
         alert('User created successfully');
+        this.af.auth.subscribe(auth => this.uid = auth.uid);
         this.router.navigateByUrl('/home');
+        this.profiles.push({
+          userId: this.uid,
+          description: 'default',
+          avatarUrl: 'https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png'
+        });
       },
       err => alert (err)
     );

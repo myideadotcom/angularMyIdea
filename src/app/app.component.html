@@ -12,7 +12,7 @@
         <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/register" routerLinkActive="active" ><span class="glyphicon glyphicon-user" ></span> Rejestracja</a></li>
         <li *ngIf="!authInfo?.isLoggedIn()"><a href="#" routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in" ></span> Zaloguj się</a></li>
         <li *ngIf="authInfo?.isLoggedIn()"><a href="#" (click)="logout()" routerLink="/home" routerLinkActive="active"><span class="glyphicon glyphicon-log-in" ></span> Wyloguj się</a></li>
-
+        <li><a routerLink="/profile" routerLinkActive="active"><span class="glyphicon glyphicon-log-in" ></span>Profil</a></li>
       </ul>
     </div>
   </nav>

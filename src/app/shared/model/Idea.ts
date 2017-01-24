@@ -11,3 +11,5 @@ export class Idea {
     return new Idea($key, title, description);
   }
 }
+
+
