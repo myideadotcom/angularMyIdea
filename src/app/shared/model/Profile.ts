@@ -8,6 +8,7 @@ export class Profile{
   }
 
   static parseFromJson({$key, userId, description, avatarUrl}):Profile{
+    console.log('Co tu wchodzi: '+ $key);
     return new Profile($key, userId, description, avatarUrl);
   }
 }

@@ -22,7 +22,11 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.af.auth.subscribe(auth => this.uid = auth.uid);
     this.profileService.getUserByUserId(this.uid).subscribe(
-      result => this.profile = result
+      result => {
+        this.profile = result;
+        console.log('Result'+ result);
+        console.log('He '+this.profile.description);
+      }
     );
     console.log(this.uid);
   }

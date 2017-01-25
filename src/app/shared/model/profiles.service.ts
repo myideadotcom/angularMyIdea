@@ -1,19 +1,25 @@
-import { Injectable } from '@angular/core';
-import {AngularFire} from "angularfire2";
+import {Injectable, Inject} from '@angular/core';
+import {AngularFire, AngularFireDatabase, FirebaseRef} from "angularfire2";
 import {Observable} from "rxjs";
 import {Profile} from "./Profile";
+import {Http} from "@angular/http";
 
 @Injectable()
 export class ProfilesService {
 
-  constructor(private af: AngularFire) { }
+
+  constructor(private db: AngularFireDatabase, private http:Http) {
+
+  }
+
 
   getUserByUserId(userId:string): Observable<Profile>{
-    return this.af.database.list('profiles',{
+    console.log('User Id'+userId+ 'i sprawdzenie danych');
+    return this.db.list('profiles',{
       query: {
         orderByChild: 'userId',
         equalTo: userId
       }
-    }).map(Profile.parseFromArray).do(console.log);
+    }).do(console.log).filter(result => result).map(result => Profile.parseFromJson(result[0])).do(console.log);
   }
 }

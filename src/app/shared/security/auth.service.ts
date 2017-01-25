@@ -26,9 +26,12 @@ export class AuthService {
     const subject = new Subject<any>();
     promise
       .then(res => {
-          this.af.auth.subscribe(auth => this.uuid = auth.uid);
-          const authInfo = new AuthInfo(this.uuid);
+         // this.af.auth.subscribe(auth => this.uuid = auth.uid);
+
+       //   const authInfo = new AuthInfo(this.uuid);
+          const authInfo = new AuthInfo(this.auth.getAuth().uid);
           this.authInfo$.next(authInfo);
+
           subject.next(res);
           subject.complete();
         },
